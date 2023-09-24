@@ -1,1 +1,1 @@
-import Validatator from '../validator';
+// import Validatator from '../validator';

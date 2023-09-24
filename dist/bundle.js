@@ -1,0 +1,1 @@
+!function(){"use strict";toString(undefined).replace(/-/g,"")}();
