@@ -5,12 +5,12 @@ export default class Validatator {
   }
 
   validateUserName() {
-    const regex = /(\d{3,})|((?=[\W])[^-_])|^[\d|\W]|[\d|\W]$/;
-    if (this.validate === true) return;
-    if (!regex.test(this.nickname)) {
+    const regex1 = /^[A-Za-z][\w-]+[A-Za-z]$/im;
+    const regex2 = /\d{3,}/m;
+    if (regex1.test(this.nickname) && !regex2.test(this.nickname)) {
       this.validate = true;
-    } else {
-      throw new Error('Некорректное имя');
+      return this.validate;
     }
+    throw new Error('Некорректное имя');
   }
 }
